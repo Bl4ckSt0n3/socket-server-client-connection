@@ -38,7 +38,11 @@ simple communication between server and client using python
         We use in the code file for instance: 
             <b>soc.bind((host_address, port_number))</b>
     </pre>
-    Now, there is need to listen ports thus we use listen() function like this <b>soc.listen()</b> 
+
+   Now, there is need to listen ports thus we use listen() function like this <b> soc.listen(). </b>
+
+
+
 </p>
 
 
