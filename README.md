@@ -40,8 +40,9 @@ simple communication between server and client using python
     </pre>
 
    Now, there is need to listen ports thus we use listen() function like this <b> soc.listen(). </b>
-
-
+   <br>
+   Before beginning the other with statement in the code, we define accept() function. This function provide connection and starts data loop. Also in this loop there ara
+   two more function recv() and send().
 
 </p>
 
