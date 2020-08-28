@@ -26,7 +26,7 @@ simple communication between server and client using python
 <a>https://www.keil.com/pack/doc/mw6/Network/html/using_network_sockets_bsd.html</a>
 
 <br>
-<p> The top of right-hand of diagram above is first several stages of socket_server.py. As you can see the beginning of server_connection function is creating a socket object. 
+<p> The top of right-hand of diagram above is first several stages of socket_server.py. As you can see the beginning of server_connection function is creating a socket object. Also passed two parameters to this function, one of them is AF_INET and second is SOCK_STREAM. AF_INET is the Internet address family for IPv4. SOCK_STREAM is the socket type for TCP, the protocol that will be used to transport our messages in the network. Anyways, we now have a new socket object.
     <br>
     <pre>
     Like this:  
@@ -41,8 +41,8 @@ simple communication between server and client using python
 
    Now, there is need to listen ports thus we use listen() function like this <b> soc.listen(). </b>
    <br>
-   Before beginning the other with statement in the code, we define accept() function. This function provide connection and starts data loop. Also in this loop there ara
-   two more function recv() and send().
+   Before beginning the other with statement in the code, we define accept() function. This function provide connection and starts data loop. Also in this loop there are
+   two more functions recv() and send().
 
 </p>
 
