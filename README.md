@@ -32,18 +32,30 @@ simple communication between server and client using python
     Like this:  
           <b>socket.socket(socket.AF_INET, socket.SOCK_STREAM)</b>
     </pre>
-    We get this socket() function so the first step for the server side. 
-    The next step is bind() function. Type of 2-Tuple host name and ports number is passed as parameters we defined at the top of socket_server.py.
+    We get this <b>socket()</b> function so the first step for the server side.
+    The next step is <b>bind()</b> function. Type of 2-Tuple host name and ports number is passed as parameters we defined at the top of <b>socket_server.py.</b>
     <pre>
         We use in the code file for instance: 
             <b>soc.bind((host_address, port_number))</b>
     </pre>
 
-   Now, there is need to listen ports thus we use listen() function like this <b> soc.listen(). </b>
+   Now, there is need to listen ports thus we use <b>listen()</b> function like this <b> soc.listen().</b>
    <br>
-   Before beginning the other with statement in the code, we define accept() function. This function provide connection and starts data loop. Also in this loop there are
-   two more functions recv() and send().
+   Before beginning the other with statement in the code, we define <b>accept()</b> function. This function provide connection and starts data loop. Also in this loop there are
+   two more functions <b>recv()</b> and <b>send().</b> Also <b>send()</b> is used to as <b>sendall()</b> in while loop.
+   
+   Getting the client socket object from <b>accept()</b> with connection that infinite loop is used to over <b>connection.recv()</b> function. 
+   <pre>
+   
+            while True: 
+                data = connection.recv(1024)
+                if not data:
+                    break
+                connection.sendall(data)
+   
+   </pre>
 
+   Lastly start the server socket program with <b>server_connection().</b>
 </p>
 
 
