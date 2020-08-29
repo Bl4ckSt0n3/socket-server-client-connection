@@ -56,6 +56,16 @@ simple communication between server and client using python
    </pre>
 
    Lastly start the server socket program with <b>server_connection().</b>
+   <br>
+   If you compare the client with the server you will see similar things probably and so simple according to server side. Now, the beginning of the client is same with server      side. These four steps start with creating a socket object so: 
+   <pre>
+        <b>socket.socket(socket.AF_INET, socket.SOCK_STREAM)</b>
+   </pre>
+   The order of other steps is <b>connect(), send() and recv().</b> Lastly, it calls <b>soc.recv()</b> to read the server’s reply and then prints it. So, we use that 
+   <pre>
+        <b>data = soc.recv(1024)</b> 
+   </pre>     
+   and start client_connection().
 </p>
 
 
