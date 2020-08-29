@@ -61,9 +61,11 @@ simple communication between server and client using python
    <pre>
         <b>socket.socket(socket.AF_INET, socket.SOCK_STREAM)</b>
    </pre>
-   The order of other steps is <b>connect(), send() and recv().</b> Lastly, it calls <b>soc.recv()</b> to read the server’s reply and then prints it. So, we use that 
+   The order of other steps is <b>connect(), send() and recv().</b> Lastly, it calls <b>soc.recv()</b> to read the server’s reply and then prints it.  
    <pre>
-        <b>data = soc.recv(1024)</b> 
+       So, we use that
+           
+           <b>data = soc.recv(1024)</b> 
    </pre>     
    and start client_connection().
 </p>
